@@ -24,7 +24,9 @@
               <li>
                 <a class="header-link" href="#about-us-section">Про нас</a>
               </li>
-              <li><a class="header-link" href="#why-us-section">Чому ми</a></li>
+              <li>
+                <a class="header-link" href="#reasons-section">Чому ми</a>
+              </li>
               <li>
                 <a class="header-link" href="#our-procedures-section"
                   >Наші процедури</a
@@ -36,9 +38,27 @@
             </ul>
           </nav>
           <ul class="social-menu">
-            <li>ph</li>
-            <li>fb</li>
-            <li>in</li>
+            <li>
+              <a href="#">
+                <svg class="social-icon" height="32" width="32">
+                  <use href="./images/social-icons.svg#icon-telephone"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="social-icon" height="32" width="32">
+                  <use href="./images/social-icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="social-icon" height="32" width="32">
+                  <use href="./images/social-icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -76,53 +96,66 @@
             </div>
             <div class="about-image">
               <img
-                class="image-before"
-                src="./images/woman-face-before.svg"
+                class="image-result start"
+                src="./images/woman-face-before.jpg"
                 alt="woman face before clinic"
               />
               <img
-                class="image-after"
-                src="./images/woman-face-after.svg"
+                class="image-result end"
+                src="./images/woman-face-after.jpg"
                 alt="woman face after clinic"
               />
             </div>
           </div>
         </div>
       </section>
-      <section class="section" id="why-us-section">
+      <section class="section" id="reasons-section">
         <div class="container">
-          <div class="why-us-container">
-            <h2 class="reasons-title">
-              Чому люди <span class="accent">обирають нас</span>
-            </h2>
-          </div>
-          <div class="why-us-menu">
-            <ul class="why-us-list">
-              <li class="reasons-item">
-                <article class="reasons-card">
-                  <p class="reasons-paragraph">
-                    Всі наші косметологи мають вищу медичну освіту та стаж
-                    роботи від 5 років
-                  </p>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <p class="reasons-paragraph">
-                    Використовуємо тільки професійне обладнання та косметику,
-                    перевірену часом
-                  </p>
-                </article>
-              </li>
-              <li>
-                <article>
-                  <p class="reasons-paragraph">
-                    Використовуємо тільки професійне обладнання та косметику,
-                    перевірену часом
-                  </p>
-                </article>
-              </li>
-            </ul>
+          <div class="reasons-container">
+            <div class="reasons-context">
+              <h2 class="reasons-title">
+                Чому люди <span class="accent">обирають нас</span>
+              </h2>
+            </div>
+            <div class="reasons-menu">
+              <ul class="reasons-list">
+                <li class="reasons-item">
+                  <article class="reasons-card">
+                    <svg class="reasons-icon" height="48" width="48">
+                      <use href="./images/reasons-icons.svg#icon-atom"></use>
+                    </svg>
+                    <p class="reasons-paragraph">
+                      Всі наші косметологи мають вищу медичну освіту<br />
+                      та стаж роботи від 5 років
+                    </p>
+                  </article>
+                </li>
+                <li class="reasons-item">
+                  <article class="reasons-card">
+                    <svg class="reasons-icon" height="48" width="48">
+                      <use
+                        href="./images/reasons-icons.svg#icon-bulidings"
+                      ></use>
+                    </svg>
+                    <p class="reasons-paragraph">
+                      Використовуємо тільки професійне обладнання та косметику,
+                      перевірену часом
+                    </p>
+                  </article>
+                </li>
+                <li class="reasons-item">
+                  <article class="reasons-card">
+                    <svg class="reasons-icon" height="48" width="48">
+                      <use href="./images/reasons-icons.svg#icon-crown"></use>
+                    </svg>
+                    <p class="reasons-paragraph">
+                      Наша мета - підкреслити переваги та приховати недоліки, а
+                      не переробити
+                    </p>
+                  </article>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -130,35 +163,48 @@
         <div class="container">
           <div class="procedures-container">
             <h2 class="procedures-title">
-              Наші <span class="accent"> процедури</span>
+              Наші <span class="accent">процедури</span>
             </h2>
           </div>
+          <button class="carousel-button" type="button">
+            <svg height="16" width="16">
+              <use href="./images/social-icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
           <ul class="procedures-list">
             <li class="procedures-item">
               <article class="procedure-card">
+                <!-- <p>Маски для обличчя</p> -->
                 <img
-                  src="./images/procedures-first.svg"
+                  src="./images/procedures-first.png"
                   alt="photo of procedure"
                 />
               </article>
             </li>
             <li class="procedures-item">
               <article class="procedure-card">
+                <!-- <p>Маски для обличчя</p> -->
                 <img
-                  src="./images/procedures-second.svg"
+                  src="./images/procedures-second.jpg"
                   alt="photo of procedure"
                 />
               </article>
             </li>
             <li class="procedures-item">
               <article class="procedure-card">
+                <!-- <p>Маски для обличчя</p> -->
                 <img
-                  src="./images/procedures-third.svg"
+                  src="./images/procedures-third.jpg"
                   alt="photo of procedure"
                 />
               </article>
             </li>
           </ul>
+          <button class="carousel-button" type="button">
+            <svg height="16" width="16">
+              <use href="./images/social-icons.svg#icon-arrow"></use>
+            </svg>
+          </button>
         </div>
       </section>
       <section class="address section" id="address-section">
@@ -189,7 +235,9 @@
             <li>
               <a class="footer-link" href="#about-us-section"> Про нас </a>
             </li>
-            <li><a class="footer-link" href="#why-us-section"> Чому ми </a></li>
+            <li>
+              <a class="footer-link" href="#reasons-section"> Чому ми </a>
+            </li>
             <li>
               <a class="footer-link" href="#our-procedures-section">
                 Наші процедури</a
@@ -222,17 +270,29 @@
               </a>
             </li>
             <li>
-              <a href="#"> <!--phone--> </a>
+              <a href="#">
+                <svg class="social-icon" height="42" width="42">
+                  <use href="./images/social-icons.svg#icon-telephone"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a href="#"> <!--facebook--> </a>
+              <a href="#">
+                <svg class="social-icon" height="42" width="42">
+                  <use href="./images/social-icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a href="#"> <!--instagram--> </a>
+              <a href="#">
+                <svg class="social-icon" height="42" width="42">
+                  <use href="./images/social-icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-          <a href="#">Політика конфіденційності</a>
-          <p>&copy; 2022 Дані захищені</p>
+          <a class="footer-link" href="#">Політика конфіденційності</a>
+          <p class="footer-data">&copy; 2022 Дані захищені</p>
         </address>
       </div>
     </footer>

@@ -5,7 +5,6 @@
     font-style: normal;
     font-weight: 100;
     src: url('../fonts/roboto-v32-latin-100.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @font-face {
@@ -15,7 +14,6 @@
     font-style: normal;
     font-weight: 300;
     src: url('../fonts/roboto-v32-latin-300.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @font-face {
@@ -25,7 +23,6 @@
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/roboto-v32-latin-regular.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @font-face {
@@ -35,7 +32,6 @@
     font-style: normal;
     font-weight: 500;
     src: url('../fonts/roboto-v32-latin-500.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @font-face {
@@ -45,7 +41,6 @@
     font-style: normal;
     font-weight: 700;
     src: url('../fonts/roboto-v32-latin-700.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @font-face {
@@ -55,34 +50,14 @@
     font-style: normal;
     font-weight: 900;
     src: url('../fonts/roboto-v32-latin-900.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    /* font-family: 'Play'; */
-    /* font-style: normal; */
-    /* font-weight: 400; */
-    /* src: url('../fonts/play-v19-latin-regular.woff2') format('woff2'); */
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-/* } */
-
-/* @font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    /* font-family: 'Play'; */
-    /* font-style: normal; */
-    /* font-weight: 700; */
-    /* src: url('../fonts/play-v19-latin-700.woff2') format('woff2'); */
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-/* } */
 
 :root{
     --primary-text-color: #011C44;
     --brand-dark-color: #2B7FFF;
     --brand-white-color: #FFFFFF;
     --grey-color: #4A4A4A;
+    --grey-color-dark: #747272;
 }
 
 /* Base */
@@ -172,6 +147,10 @@ ul li{
 /*Hero section*/
 .hero-section{
     padding: 123px 0 126px 0;
+    background-image: url('./../images/hero-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
 }
 
 .main-description{
@@ -232,6 +211,21 @@ ul li{
     justify-content: flex-start;
 }
 
+.image-result {
+    box-shadow: 0px 4px 4px 0px #A8C6F533;
+    border-radius: 50%;
+}
+
+.image-result.start{
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px 0px #A8C6F533;
+}
+
+.image-result.end{
+    box-shadow: 0px 4px 4px 0px #A8C6F533;
+    border-radius: 50%;
+}
+
 .about-title{
     max-width: 529px;
     font-weight: 700;
@@ -252,11 +246,21 @@ ul li{
 }
 
 /*Why us section*/
-.why-us-container{
-    display: flex;
+.reasons-container{
+    padding-top: 176px;
     justify-content: center;
+    /* background-color: var(--primary-text-color); remove */
+    background: linear-gradient(38.2deg, 
+    rgba(43, 127, 255, 0.2) 39.74%, 
+    rgba(43, 127, 255, 0) 54.16%, 
+    rgba(43, 127, 255, 0) 66.66%);
+    /* background: linear-gradient(38.2deg, rgba(43, 127, 255, 0.2) 39.74%, rgba(43, 127, 255, 0) 54.16%, rgba(43, 127, 255, 0) 66.66%); */
+}
+
+.reasons-context {
+    display: flex;
     flex-grow: 1;
-    align-items: center;
+    justify-content: center;
 }
 
 .reasons-title{
@@ -265,18 +269,19 @@ ul li{
     font-weight: 700;
     margin-bottom: 48px;
     flex-grow: 1;
+    text-align: center;
 }
 
 .reasons-title .accent{
     color: var(--brand-dark-color);
 }
 
-.why-us-menu{
+.reasons-menu{
     display: flex;
     justify-content: space-between;
 }
 
-.why-us-list{
+.reasons-list{
     display: flex;
     gap: 56px;
     flex-wrap: wrap;
@@ -289,7 +294,20 @@ ul li{
 }
 
 .reasons-card{
-    border: 5px solid #011C44;
+    padding: 24px 32px;
+    background-color: var(--brand-white-color);
+    /* border: 5px solid #011C44; */
+    border-radius: 32px;
+    box-shadow: 0px 4px 4px 0px #A8C6F561;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.reasons-icon{
+    fill: var(--brand-dark-color);
 }
 
 .reasons-paragraph{
@@ -313,7 +331,13 @@ ul li{
 }
 
 .procedure-card{
-    border: 1px solid #011C44;
+    max-height: 456px;
+    max-width: 344px;
+    border: 1px solid var(--primary-text-color);
+    background: linear-gradient(180.05deg, 
+    rgba(1, 28, 68, 0) 48.53%, 
+    rgba(1, 28, 68, 0.725825) 84.61%, 
+    var(--primary-text-color) 101.39%);
 }
 
 .procedures-item{
@@ -321,15 +345,34 @@ ul li{
 }
 
 .procedures-title{
-    display: flex;
     font-size: 64px;
     font-weight: 700;        
     margin-bottom: 48px;
-    justify-content: center;
+    text-align: center;
 }
 
 .procedures-title .accent{
     color: var(--brand-dark-color);
+}
+
+/* Carousel */
+.carousel-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--primary-text-color);
+    fill: var(--primary-text-color);
+    cursor: pointer;
+}
+
+.carousel-button:hover{
+    background-color: var(--brand-dark-color);
+    fill: var(--brand-white-color);
 }
 
 /*Contact section*/
@@ -355,9 +398,27 @@ ul li{
 /*Footer*/
 footer{
     background-color: var(--primary-text-color);
+    background-image: url('./../images/footer-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .footer-link{
     color: var(--brand-white-color);
     font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-link:hover{
+    color: var(--brand-dark-color);
+}
+
+.social-icon:hover{
+    fill: var(--brand-dark-color);
+}
+
+.footer-data{
+    font-size: 13px;
+    color: var(--grey-color-dark);
 }
